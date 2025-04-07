@@ -187,6 +187,19 @@ pipeline {
     }
 }
 
+pipeline {
+    agent any
+    
+    stages {
+        stage ("stage-1") {
+            steps {
+                sh 'mkdir d2 d3'
+                sh 'touch f1'
+                sh 'cat /etc/passwd'
+            }
+        }
+    }
+}
 passs
 pipeline agent any stages stage and steps
 
